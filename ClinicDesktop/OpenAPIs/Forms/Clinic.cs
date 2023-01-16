@@ -169,7 +169,18 @@ namespace ClinicDesktop
 
         private void updateClient()
         {
-            throw new NotImplementedException();
+            try
+            {
+                int clientId = getClientId();
+                Form updateClientForm = new UpdateClientForm(apiUrl, clientId);
+                updateClientForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Form alert = new AlertForm();
+                alert.ShowDialog();
+            }
+            viewActive();
         }
 
         private void updatePet()
@@ -214,6 +225,20 @@ namespace ClinicDesktop
             else
             {
                 d = consultationsViewer.FocusedItem.Text;
+                return Int32.Parse(d);
+            }
+        }
+
+        private int getClientId()
+        {
+            string d;
+            if (ClientsViewer.FocusedItem.Text == null)
+            {
+                throw new Exception("null");
+            }
+            else
+            {
+                d = ClientsViewer.FocusedItem.Text;
                 return Int32.Parse(d);
             }
         }
