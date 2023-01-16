@@ -61,6 +61,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "AlertForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AlertForm";
             this.ResumeLayout(false);
             this.PerformLayout();
