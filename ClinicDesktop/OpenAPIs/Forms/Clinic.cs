@@ -348,7 +348,18 @@ namespace ClinicDesktop
 
         private void deleteClient()
         {
-            throw new NotImplementedException();
+            try
+            {
+                int clientId = getClientId();
+                Form deleteClientForm = new DeleteClientForm(apiUrl, clientId);
+                deleteClientForm.ShowDialog();
+                viewActive();
+            }
+            catch
+            {
+                Form alert = new AlertForm();
+                alert.ShowDialog();
+            }
         }
 
         private void deletePet()
