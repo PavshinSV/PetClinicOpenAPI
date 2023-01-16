@@ -14,9 +14,10 @@ namespace ClinicDesktop.OpenAPIs.Forms
     public partial class UpdatePetForm : Form
     {
         ClinicDesktopREST myClinic;
-        int petId;
+        readonly int petId;
         public UpdatePetForm(string apiUrl, int id)
         {
+            petId = id;
             myClinic = new ClinicDesktopREST(apiUrl, new System.Net.Http.HttpClient());
             Pet pet = myClinic.GetPetByIdAsync(id).Result;
             InitializeComponent();

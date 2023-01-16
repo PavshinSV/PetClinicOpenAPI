@@ -313,5 +313,47 @@ namespace ClinicDesktop
             createClient.ShowDialog();
             viewActive();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (clientsActive)
+            {
+                deleteClient();
+            }
+            if (petsActive)
+            {
+                deletePet();
+            }
+            if (consultationsActive)
+            {
+                deleteConsultation();
+            }
+        }
+
+        private void deleteConsultation()
+        {
+            try
+            {
+                int consultationId = getConsultationId();
+                Form deleteConsultationForm = new DeleteConsultationForm(apiUrl,consultationId);
+                deleteConsultationForm.ShowDialog();
+                viewActive();
+            } catch
+            {
+                Form alert = new AlertForm();
+                alert.ShowDialog();
+            }
+
+        }
+
+        private void deleteClient()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void deletePet()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
