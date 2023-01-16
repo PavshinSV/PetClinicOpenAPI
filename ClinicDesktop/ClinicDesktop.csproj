@@ -92,6 +92,12 @@
     <Compile Include="OpenAPIs\Forms\DeleteConsultationForm.Designer.cs">
       <DependentUpon>DeleteConsultationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpenAPIs\Forms\DeletePetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenAPIs\Forms\DeletePetForm.Designer.cs">
+      <DependentUpon>DeletePetForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenAPIs\Forms\UpdateClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OpenAPIs\Forms\DeleteConsultationForm.resx">
       <DependentUpon>DeleteConsultationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenAPIs\Forms\DeletePetForm.resx">
+      <DependentUpon>DeletePetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenAPIs\Forms\UpdateClientForm.resx">
       <DependentUpon>UpdateClientForm.cs</DependentUpon>

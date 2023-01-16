@@ -86,6 +86,7 @@
             this.buttonGetById.TabIndex = 7;
             this.buttonGetById.Text = "ПОЛУЧИТЬ ПО Id";
             this.buttonGetById.UseVisualStyleBackColor = false;
+            this.buttonGetById.Click += new System.EventHandler(this.buttonGetById_Click);
             // 
             // buttonGetAll
             // 

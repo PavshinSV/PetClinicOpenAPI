@@ -364,6 +364,48 @@ namespace ClinicDesktop
 
         private void deletePet()
         {
+            try
+            {
+                int petId = getPetId();
+                Form deletePetForm = new DeletePetForm(apiUrl, petId);
+                deletePetForm.ShowDialog();
+                viewActive();
+            }
+            catch
+            {
+                Form alert = new AlertForm();
+                alert.ShowDialog();
+            }
+        }
+
+        private void buttonGetById_Click(object sender, EventArgs e)
+        {
+            if (clientsActive)
+            {
+                getClientById();
+            }
+            if (petsActive)
+            {
+                getPetById();
+            }
+            if (consultationsActive)
+            {
+                getConsultationById();
+            }
+        }
+
+        private void getConsultationById()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void getPetById()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void getClientById()
+        {
             throw new NotImplementedException();
         }
     }
