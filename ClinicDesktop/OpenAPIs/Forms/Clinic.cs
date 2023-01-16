@@ -396,17 +396,20 @@ namespace ClinicDesktop
 
         private void getConsultationById()
         {
-            throw new NotImplementedException();
+            Form getConsultationByIdForm = new GetConsultationByIdForm(apiUrl);
+            getConsultationByIdForm.ShowDialog();
         }
 
         private void getPetById()
         {
-            throw new NotImplementedException();
+            Form getPetByIdForm = new GetPetByIdForm(apiUrl);
+            getPetByIdForm.ShowDialog();
         }
 
         private void getClientById()
         {
-            throw new NotImplementedException();
+            Form getClientByIdForm = new GetClientByIdForm(apiUrl);
+            getClientByIdForm.ShowDialog();
         }
     }
 }

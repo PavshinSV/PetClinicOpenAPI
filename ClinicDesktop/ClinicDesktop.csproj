@@ -98,6 +98,24 @@
     <Compile Include="OpenAPIs\Forms\DeletePetForm.Designer.cs">
       <DependentUpon>DeletePetForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpenAPIs\Forms\GetClientByIdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenAPIs\Forms\GetClientByIdForm.Designer.cs">
+      <DependentUpon>GetClientByIdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenAPIs\Forms\GetConsultationByIdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenAPIs\Forms\GetConsultationByIdForm.Designer.cs">
+      <DependentUpon>GetConsultationByIdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenAPIs\Forms\GetPetByIdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenAPIs\Forms\GetPetByIdForm.Designer.cs">
+      <DependentUpon>GetPetByIdForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenAPIs\Forms\UpdateClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +160,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OpenAPIs\Forms\DeletePetForm.resx">
       <DependentUpon>DeletePetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenAPIs\Forms\GetClientByIdForm.resx">
+      <DependentUpon>GetClientByIdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenAPIs\Forms\GetConsultationByIdForm.resx">
+      <DependentUpon>GetConsultationByIdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenAPIs\Forms\GetPetByIdForm.resx">
+      <DependentUpon>GetPetByIdForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenAPIs\Forms\UpdateClientForm.resx">
       <DependentUpon>UpdateClientForm.cs</DependentUpon>

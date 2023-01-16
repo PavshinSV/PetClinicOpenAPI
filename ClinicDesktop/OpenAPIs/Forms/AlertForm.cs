@@ -17,6 +17,12 @@ namespace ClinicDesktop.OpenAPIs.Forms
             InitializeComponent();
         }
 
+        public AlertForm(string str)
+        {
+            InitializeComponent();
+            label1.Text = str;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
