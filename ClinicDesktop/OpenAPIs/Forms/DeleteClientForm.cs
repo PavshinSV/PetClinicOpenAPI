@@ -35,6 +35,22 @@ namespace ClinicDesktop.OpenAPIs.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ICollection<Consultation> consultations = myClinic.GetAllConsultationsAsync().Result;
+            ICollection<Pet> pets = myClinic.GetAllPetsAsync().Result;
+            foreach (Pet pet in pets) 
+            { 
+                if (pet.ClientId == client.ClientId)
+                {
+                    myClinic.DeletePetAsync(pet.PetId).Wait();
+                }
+            }
+            foreach (Consultation consultation in consultations)
+            {
+                if (consultation.ClientId == client.ClientId)
+                {
+                    myClinic.DeleteConsultationAsync(consultation.ConsultationId).Wait();
+                }
+            }
             myClinic.DeleteClientAsync(client.ClientId);
             this.Close();
         }
